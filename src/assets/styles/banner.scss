@@ -1,0 +1,239 @@
+#banner {
+  width: 100%;
+  position: relative;
+
+  > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    > video {
+      width: 103%;
+      // margin-top: 10px;
+    }
+  }
+
+  > .content {
+    width: 34%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    > img {
+      width: 100%;
+    }
+
+    > .btn-play {
+      width: 205px;
+      height: 60px;
+      position: relative;
+
+      > img {
+        width: 100%;
+      }
+
+      > img:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+      }
+
+      &:hover {
+        > img:nth-child(2) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  > img:nth-child(3) {
+    width: 41%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 990;
+    transform: translate(-28%, 25%);
+  }
+
+  > .slogan {
+    width: 68%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 990;
+    transform: translate(-50%, -51%);
+
+    > img:nth-child(1) {
+      width: 100%;
+    }
+
+    > div:nth-child(2) {
+      color: #fff;
+      text-align: center;
+      text-shadow:
+        0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 1px 2px #de622d;
+      font-family: Aclonica;
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 46px */
+      text-transform: uppercase;
+      width: 60%;
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    > div:nth-child(3) {
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-family: "Perpetua";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 16px */
+      position: absolute;
+      bottom: 13%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #banner {
+    > div:nth-child(1) > video {
+      width: 100%;
+      margin-top: -105px;
+    }
+
+    > .slogan {
+      transform: translate(-50%, -51%);
+      > div:nth-child(2) {
+        top: 28%;
+        font-size: 46px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1537px) {
+  #banner > .slogan {
+    > div:nth-child(2) {
+      font-size: 50px;
+      width: 55%;
+    }
+    > div:nth-child(3) {
+      font-size: 20px;
+      bottom: 12%;
+    }
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  #banner > .slogan > div:nth-child(2) {
+    font-size: 52px;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #banner > .slogan {
+    > div:nth-child(2) {
+      top: 26%;
+      font-size: 46px;
+    }
+
+    > div:nth-child(3) {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #banner > .slogan > div:nth-child(2) {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #banner {
+    > .content {
+      gap: 30px;
+      > .btn-play {
+        width: 180px;
+        height: auto;
+      }
+    }
+
+    > .slogan {
+      > div:nth-child(2) {
+        font-size: 3vw;
+      }
+      > div:nth-child(3) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  #banner {
+    height: 100vh;
+
+    > div:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      > video {
+        width: auto;
+        height: 100%;
+        margin-top: 0;
+      }
+    }
+    > .content {
+      width: 100%;
+      gap: 30px;
+      top: 45%;
+
+      > img {
+        width: 70%;
+        max-width: 298px;
+      }
+      > .btn-play {
+        width: 140px;
+      }
+    }
+
+    > img:nth-child(3) {
+      width: 80%;
+      max-width: 400px;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 0);
+    }
+
+    > .slogan {
+      width: 100%;
+      transform: translate(-50%, -90%);
+
+      > div:nth-child(2) {
+        font-size: 4.5vw;
+        top: 26%;
+      }
+    }
+  }
+}

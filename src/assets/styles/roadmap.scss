@@ -1,0 +1,665 @@
+#roadmap {
+  @font-face {
+    font-family: 'Aclonica';
+    font-style: normal;
+    src: url("@/assets/fonts/Aclonica-Regular.ttf");
+  }
+  @font-face {
+    font-family: 'Perpetuas';
+    font-style: normal;
+    src: url("@/assets/fonts/Perpetua.ttf");
+  }
+  width: 100%;
+  .roadmap-normal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background: #090A18;
+    padding: 150px 0;
+    position: relative;
+    margin-top: -200px;
+    .title-roadmap {
+      color: #FFBC4F;
+      text-align: center;
+      font-family: Aclonica, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 37px; /* 115.625% */
+      letter-spacing: 1.12px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .roadmap-group {
+      display: flex;
+      width: 100%;
+      .roadmap-line {
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        .line-row {
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, #C04300 0%, #FFC800 100%);
+        }
+      }
+      .roadmap-body {
+        flex-basis: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 270px;
+        position: relative;
+
+        .roadmap-content-item {
+          display: flex;
+          height: 100%;
+
+          img {
+            width: 64px;
+            height: 64px;
+          }
+        }
+
+        .roadmap-content-item:nth-child(1) {
+
+          .idea-concept {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 171px;
+            height: 153px;
+            position: relative;
+
+            img {
+              margin-bottom: 4px;
+            }
+
+            span:nth-child(2) {
+              margin-bottom: 24px;
+              color: #FFF;
+              text-align: center;
+              font-family: "Perpetua";
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+            .line-active {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 12px;
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                margin-bottom: -2px;
+                z-index: 2;
+              }
+
+              div {
+                width: 100%;
+                height: 3px;
+                background: #FFC800;
+                position: absolute;
+                top: 5.5px;
+              }
+            }
+
+            .art-board {
+              position: absolute;
+              bottom: -5px;
+              right: -50px;
+              z-index: 5;
+
+              img {
+                width: 78px;
+                height: 34px;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+
+        .roadmap-content-item:nth-child(2) {
+          display: flex;
+          height: 100%;
+          align-items: end;
+          justify-content: center;
+
+          .mvp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            width: 171px;
+            height: 153px;
+
+            img {
+              margin-top: 4px;
+            }
+
+            span {
+              margin-top: 24px;
+              color: #FFF;
+              text-align: center;
+              font-family: "Perpetua";
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+            .line-normal {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 12px;
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                margin-top: 0;
+                z-index: 2;
+              }
+
+              div {
+                width: 100%;
+                height: 2px;
+                background: #979797;
+                position: absolute;
+                bottom: 5.5px;
+              }
+            }
+          }
+        }
+
+        .roadmap-content-item:nth-child(3) {
+          .testnet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 171px;
+            height: 153px;
+
+            img {
+              margin-bottom: 4px;
+            }
+
+            span {
+              margin-bottom: 24px;
+              color: #FFF;
+              text-align: center;
+              font-family: "Perpetua";
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+            .line-normal {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 12px;
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                z-index: 2;
+                margin-bottom: -2px;
+              }
+
+              div {
+                width: 100%;
+                height: 2px;
+                background: #979797;
+                position: absolute;
+                top: 6.5px;
+              }
+            }
+          }
+        }
+
+        .roadmap-content-item:nth-child(4) {
+          display: flex;
+          height: 100%;
+          align-items: end;
+          justify-content: center;
+
+          .mainnet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            width: 171px;
+            height: 153px;
+
+            img {
+              margin-top: 4px;
+            }
+
+            span {
+              margin-top: 24px;
+              color: #FFF;
+              text-align: center;
+              font-family: "Perpetua";
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+            .line-normal {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 12px;
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                margin-top: 0;
+                z-index: 2;
+              }
+
+              div {
+                width: 100%;
+                height: 2px;
+                background: #979797;
+                position: absolute;
+                bottom: 5.5px;
+              }
+            }
+          }
+        }
+
+        .roadmap-content-item:nth-child(5) {
+          .portal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 171px;
+            height: 153px;
+
+            img {
+              margin-bottom: 4px;
+            }
+
+            span {
+              margin-bottom: 24px;
+              color: #FFF;
+              text-align: center;
+              font-family: "Perpetua";
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+            .line-normal {
+              width: 100%;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 12px;
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                margin-bottom: -2px;
+                z-index: 2;
+              }
+
+              div {
+                width: 100%;
+                height: 2px;
+                background: #979797;
+                position: absolute;
+                top: 6.5px;
+              }
+            }
+          }
+        }
+      }
+
+      .roadmap-line-2 {
+        display: flex;
+        align-items: center;
+        flex-basis: 100%;
+        margin-top: -2px;
+        .line-row-normal {
+          width: 50%;
+          height: 2px;
+          background: #979797;
+          margin-top: 3px;
+        }
+        svg {
+          margin-bottom: 2px;
+        }
+
+      }
+    }
+    .roadmap-glow {
+      position: absolute;
+      object-position: center;
+      object-fit: contain;
+      height: 100%;
+      top: 0;
+      right: 0;
+    }
+  }
+  .roadmap-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #roadmap {
+    .roadmap-normal {
+      padding: 0;
+      margin-top: -300px;
+      margin-bottom: 150px;
+
+      .roadmap-group {
+
+
+        .roadmap-body {
+
+          .roadmap-content-item:nth-child(1) {
+
+            .idea-concept {
+
+              width: 120px;
+              height: 153px;
+              position: relative;
+
+            }
+          }
+
+          .roadmap-content-item:nth-child(2) {
+            .mvp {
+              width: 120px;
+              height: 153px;
+            }
+          }
+
+          .roadmap-content-item:nth-child(3) {
+            .testnet {
+              width: 120px;
+              height: 153px;
+            }
+          }
+
+          .roadmap-content-item:nth-child(4) {
+            .mainnet {
+              width: 120px;
+              height: 153px;
+            }
+          }
+
+          .roadmap-content-item:nth-child(5) {
+            .portal {
+              width: 120px;
+              height: 153px;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  #roadmap {
+    .roadmap-normal {
+      display: none;
+    }
+    .roadmap-mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding: 60px 60px 150px 60px;
+      gap: 100px;
+      .title {
+        color: #FFBC4F;
+        text-align: center;
+        font-family: Aclonica;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 37px; /* 154.167% */
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        .item {
+          display: flex;
+          gap: 24px;
+          width: 207px;
+          height: 190px;
+
+          .item-left {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: start;
+            width: 12px;
+            height: 100%;
+            img:first-child{
+              z-index: 2;
+              margin-top: 60px;
+            }
+            .yellow-line {
+              position: absolute;
+              height: 100%;
+              width: 3px;
+              background: linear-gradient(180deg, #C04300 0%, #FFC800 100%);
+              z-index: 1;
+            }
+            .gray-line {
+              position: absolute;
+              height: 100%;
+              width: 2px;
+              background: #9d958d;
+              z-index: 1;
+            }
+            img:last-child {
+              position: absolute;
+              bottom: 0;
+              width: 78px;
+              height: 34px;
+              flex-shrink: 0;
+              z-index: 3;
+            }
+            svg {
+              width: 28px;
+              height: 13px;
+              flex-shrink: 0;
+              position: absolute;
+              bottom: -5px;
+              right: -10px;
+            }
+          }
+          .item-right {
+
+            position: relative;
+            padding-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 16px;
+            img {
+              width: 64px;
+              height: 64px;
+            }
+            span {
+              color: #FFF;
+              text-align: center;
+              font-family: Perpetua;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 37px; /* 154.167% */
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+          }
+        }
+      }
+      .glow {
+        position: absolute;
+        right: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #roadmap {
+    .roadmap-normal {
+      display: none;
+    }
+    .roadmap-mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding: 60px 60px 150px 60px;
+      gap: 100px;
+      .title {
+        color: #FFBC4F;
+        text-align: center;
+        font-family: Aclonica;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 37px; /* 154.167% */
+        letter-spacing: 0.84px;
+        text-transform: uppercase;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        .item {
+          display: flex;
+          gap: 24px;
+          width: 207px;
+          height: 190px;
+
+          .item-left {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: start;
+            width: 12px;
+            height: 100%;
+            img:first-child{
+              z-index: 2;
+              margin-top: 60px;
+            }
+            .yellow-line {
+              position: absolute;
+              height: 100%;
+              width: 3px;
+              background: linear-gradient(180deg, #C04300 0%, #FFC800 100%);
+              z-index: 1;
+            }
+            .gray-line {
+              position: absolute;
+              height: 100%;
+              width: 2px;
+              background: #9d958d;
+              z-index: 1;
+            }
+            img:last-child {
+              position: absolute;
+              bottom: 0;
+              width: 78px;
+              height: 34px;
+              flex-shrink: 0;
+              z-index: 3;
+            }
+            svg {
+              width: 28px;
+              height: 13px;
+              flex-shrink: 0;
+              position: absolute;
+              bottom: -5px;
+              right: -10px;
+            }
+          }
+          .item-right {
+
+            position: relative;
+            padding-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 16px;
+            img {
+              width: 64px;
+              height: 64px;
+            }
+            span {
+              color: #FFF;
+              text-align: center;
+              font-family: Perpetua;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 37px; /* 154.167% */
+              letter-spacing: 0.84px;
+              text-transform: uppercase;
+            }
+
+          }
+        }
+      }
+      .glow {
+        position: absolute;
+        right: 0;
+        height: 100%;
+      }
+    }
+  }
+}

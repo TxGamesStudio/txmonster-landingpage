@@ -1,0 +1,310 @@
+#about {
+  position: relative;
+  width: 100%;
+  height: calc(100vw / 1916 * 1384);
+  z-index: 2;
+  margin-top: -6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  > img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  > div {
+    max-width: 1440px;
+    padding: 0 160px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    border-bottom: 3px solid #1c151a;
+
+    > div {
+      display: flex;
+      gap: 100px;
+
+      > img {
+        max-width: 502px;
+        margin-top: -40px;
+        z-index: 990;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        padding: 200px 0 0 0;
+        gap: 30px;
+        z-index: 990;
+
+        > div:nth-child(1) {
+          position: relative;
+          width: fit-content;
+          height: fit-content;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > div {
+            position: absolute;
+            top: 7px;
+            right: 8px;
+            color: #090a18;
+            font-family: Perpetua;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 100%;
+          }
+        }
+      }
+
+      .title {
+        width: 100%;
+        color: #ffbc4f;
+        font-family: Aclonica;
+        font-size: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .line {
+        width: 41px;
+        height: 1px;
+        background: rgba(242, 187, 90, 0.88);
+      }
+
+      .content {
+        width: 100%;
+        color: var(--Text-primal, #fffbef);
+        text-align: justify;
+        font-family: Perpetua;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .btn-play {
+        width: 205px;
+        height: 60px;
+        position: relative;
+
+        > img {
+          width: 100%;
+        }
+
+        > img:nth-child(2) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.4s ease-in-out;
+        }
+
+        &:hover {
+          > img:nth-child(2) {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  > div > .first-content {
+    justify-content: space-between;
+    > div:nth-child(2) {
+      > div:nth-child(1) > svg {
+        width: 106px;
+        height: 26px;
+      }
+    }
+  }
+
+  > div > .second-content {
+    justify-content: space-between;
+
+    > div:nth-child(1) {
+      width: 45%;
+      padding: 0;
+
+      > div:nth-child(1) > svg {
+        width: 150px;
+        height: 26px;
+      }
+
+      > .title {
+        width: 100%;
+      }
+    }
+    > div:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+
+      > img {
+        max-width: 262px;
+        width: 100%; /* Hoặc một giá trị cụ thể khác */
+        height: 100%; /* Hoặc một giá trị cụ thể khác */
+        object-fit: contain;
+      }
+
+      > div {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        > img {
+          width: 100%; /* Hoặc một giá trị cụ thể khác */
+          height: 100%; /* Hoặc một giá trị cụ thể khác */
+          object-fit: contain;
+        }
+
+        > img:nth-child(1) {
+          width: 235px;
+        }
+
+        > img:nth-child(2) {
+          width: 191px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1916px) {
+  #about {
+    height: auto;
+    > img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1537px) {
+  #about > div > div .content {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #about {
+    > div {
+      padding: 0 100px;
+      gap: 140px;
+      > .first-content {
+        gap: 40px;
+        > img {
+          width: 30vw;
+          height: calc(30vw / 503 * 724);
+          margin-top: 30px;
+        }
+
+        > div:nth-child(2) {
+          gap: 20px;
+          padding-top: 120px;
+        }
+      }
+
+      > .second-content {
+        gap: 40px;
+        > div:nth-child(1) {
+          width: 60%;
+          padding-bottom: 50px;
+          gap: 20px;
+        }
+        > div:nth-child(2) {
+          width: 40%;
+          align-items: center;
+          > img {
+            max-width: 55%;
+            height: auto;
+          }
+          > div {
+            width: 45%;
+            > img:nth-child(1) {
+              width: 100%;
+            }
+            > img:nth-child(2) {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    > img {
+      top: 0;
+      left: 0;
+    }
+    > div {
+      padding: 0 30px;
+      gap: 80px;
+
+      > div .title {
+        font-size: 24px;
+      }
+      > div .content {
+        font-size: 14px;
+      }
+      > .first-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+        > img {
+          width: 100%;
+          max-width: 320px;
+          max-height: 461px;
+          height: calc(calc(100vw - 80px) / 503 * 724);
+          margin-top: -15px;
+        }
+      }
+      > .first-content {
+        > div:nth-child(2) {
+          padding-top: 100px;
+        }
+      }
+
+      > .second-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        > div:nth-child(1) {
+          width: 100%;
+          gap: 20px;
+        }
+        > div:nth-child(2) {
+          width: 100%;
+          max-width: 450px;
+          justify-content: center;
+          > img {
+            margin-top: 6vw;
+            max-width: 55%;
+          }
+          > div {
+            width: 45%;
+            > img:nth-child(1) {
+              width: 100%;
+            }
+            > img:nth-child(2) {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
